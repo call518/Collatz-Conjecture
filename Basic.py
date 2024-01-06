@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 
 MIN_VALUE = 3  # 글로벌 변수 설정
 
-st.set_page_config(page_title="Collatz Conjecture Visualization - Basic", layout="wide", page_icon="🌀")
+st.set_page_config(page_title="Collatz Conjecture Visualization (Basic)", layout="wide", page_icon="🌀")
 
 st.markdown("# Collatz Conjecture Visualization (Basic)")
 st.sidebar.header("Input Number")
