@@ -5,10 +5,10 @@ import plotly.graph_objects as go
 
 MIN_VALUE = 3  # 글로벌 변수 설정
 
-st.set_page_config(page_title="Collatz Conjecture Visualization", layout="wide", page_icon="🌀")
+st.set_page_config(page_title="Collatz Conjecture Visualization - Basic", layout="wide", page_icon="🌀")
 
-st.markdown("# Collatz Conjecture Visualization")
-st.sidebar.header("Collatz Conjecture")
+st.markdown("# Collatz Conjecture Visualization (Basic)")
+st.sidebar.header("Input Number")
 st.write(
     """This demo visualizes the Collatz Conjecture. Enter a number (3 or higher) and watch the sequence unfold in real-time!"""
 )
