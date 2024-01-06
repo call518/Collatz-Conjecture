@@ -11,6 +11,9 @@ st.write(
     """This demo finds the starting number within a given range that produces the longest sequence in its Collatz sequence and visualizes it."""
 )
 
+# 로그 스케일 적용 여부 체크박스
+log_scale = st.sidebar.checkbox("Apply Log Scale to Chart")
+
 def collatz(n):
     """Return the Collatz sequence for a given number."""
     sequence = []
@@ -40,7 +43,11 @@ if start_button:
     # 찾은 시작 값에 대한 시퀀스를 차트에 그리기
     values = collatz(longest_start_number)
     fig = go.Figure()
-    fig.add_trace(go.Scatter(x=list(range(len(values))), y=values, mode='lines+markers', name=f'Start: {longest_start_number}'))
+    fig.add_trace(go.Scatter(x=list(range(len(values))), y=values, mode='lines+markers', marker=dict(size=2), line=dict(width=0.5), name=f'Start: {longest_start_number}'))
     fig.update_layout(height=600, showlegend=True)
+
+    # 로그 스케일 적용
+    if log_scale:
+        fig.update_yaxes(type="log")
 
     chart_placeholder = st.plotly_chart(fig, use_container_width=True)
