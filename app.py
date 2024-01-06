@@ -13,6 +13,9 @@ st.write(
     """This demo visualizes the Collatz Conjecture. Enter a number (3 or higher) and watch the sequence unfold in real-time!"""
 )
 
+# 로그 스케일 적용 여부 체크박스
+log_scale = st.sidebar.checkbox("Apply Log Scale to Chart")
+
 def collatz(n):
     """Return the next number in the Collatz sequence."""
     return n // 2 if n % 2 == 0 else 3 * n + 1
@@ -32,7 +35,10 @@ if start_button:
         status_text = st.sidebar.empty()
         values = [number]
         fig = go.Figure(go.Scatter(x=list(range(len(values))), y=values, mode='lines+markers'))
-        fig.update_layout(height=600)
+        if log_scale:
+            fig.update_layout(height=600, yaxis_type="log")
+        else:
+            fig.update_layout(height=600)
         chart = chart_placeholder.plotly_chart(fig, use_container_width=True)
 
         i = 0
@@ -40,7 +46,10 @@ if start_button:
             new_value = collatz(values[-1])
             values.append(new_value)
             fig = go.Figure(go.Scatter(x=list(range(len(values))), y=values, mode='lines+markers'))
-            fig.update_layout(height=600)
+            if log_scale:
+                fig.update_layout(height=600, yaxis_type="log")
+            else:
+                fig.update_layout(height=600)
             chart.plotly_chart(fig, use_container_width=True)
 
             progress = int((i / (i + np.log2(values[-1]))) * 100)
