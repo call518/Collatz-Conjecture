@@ -48,7 +48,7 @@ if start_button:
     fig = go.Figure()
     for num in max_start_numbers:
         values = collatz(num)[0]
-        fig.add_trace(go.Scatter(x=list(range(len(values))), y=values, mode='lines+markers', name=f'Start: {num}'))
+        fig.add_trace(go.Scatter(x=list(range(len(values))), y=values, mode='lines+markers', marker=dict(size=2), line=dict(width=0.5), name=f'Start: {num}'))
     fig.update_layout(height=600, showlegend=True)
 
     chart_placeholder = st.plotly_chart(fig, use_container_width=True)

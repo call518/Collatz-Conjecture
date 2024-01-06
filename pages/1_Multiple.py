@@ -49,7 +49,7 @@ if start_button:
     fig = go.Figure()
     for num in numbers:
         values = collatz(num)
-        fig.add_trace(go.Scatter(x=list(range(len(values))), y=values, mode='lines+markers', name=f'Start: {num}'))
+        fig.add_trace(go.Scatter(x=list(range(len(values))), y=values, mode='lines+markers', marker=dict(size=2), line=dict(width=0.5), name=f'Start: {num}'))
     if log_scale:
         fig.update_layout(height=600, yaxis_type="log")
     else:
