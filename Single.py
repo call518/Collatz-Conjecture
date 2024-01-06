@@ -5,9 +5,9 @@ import plotly.graph_objects as go
 
 MIN_VALUE = 3  # 글로벌 변수 설정
 
-st.set_page_config(page_title="Collatz Conjecture Visualization (Basic)", layout="wide", page_icon="🌀")
+st.set_page_config(page_title="Collatz Conjecture Visualization (Single)", layout="wide", page_icon="🌀")
 
-st.markdown("# Collatz Conjecture Visualization (Basic)")
+st.markdown("# Collatz Conjecture Visualization (Single)")
 st.sidebar.header("Input Number")
 st.write(
     """This demo visualizes the Collatz Conjecture. Enter a number (3 or higher) and watch the sequence unfold in real-time!"""
@@ -36,9 +36,9 @@ if start_button:
         values = [number]
         fig = go.Figure(go.Scatter(x=list(range(len(values))), y=values, mode='lines+markers'))
         if log_scale:
-            fig.update_layout(height=600, yaxis_type="log")
+            fig.update_layout(height=600, showlegend=True, yaxis_type="log")
         else:
-            fig.update_layout(height=600)
+            fig.update_layout(height=600, showlegend=True)
         chart = chart_placeholder.plotly_chart(fig, use_container_width=True)
 
         i = 0
@@ -47,9 +47,9 @@ if start_button:
             values.append(new_value)
             fig = go.Figure(go.Scatter(x=list(range(len(values))), y=values, mode='lines+markers'))
             if log_scale:
-                fig.update_layout(height=600, yaxis_type="log")
+                fig.update_layout(height=600, showlegend=True, yaxis_type="log")
             else:
-                fig.update_layout(height=600)
+                fig.update_layout(height=600, showlegend=True)
             chart.plotly_chart(fig, use_container_width=True)
 
             progress = int((i / (i + np.log2(values[-1]))) * 100)

@@ -5,9 +5,9 @@ import random
 MIN_VALUE = 3  # 글로벌 변수 설정
 MAX_LINES = 1000  # 최대 라인 수 설정
 
-st.set_page_config(page_title="Collatz Conjecture Visualization (Advanced)", layout="wide", page_icon="🌀")
+st.set_page_config(page_title="Collatz Conjecture Visualization (Multiple)", layout="wide", page_icon="🌀")
 
-st.markdown("# Collatz Conjecture Visualization (Advanced)")
+st.markdown("# Collatz Conjecture Visualization (Multiple)")
 st.sidebar.header("Input Range of Numbers")
 st.write(
     """This demo visualizes the Collatz Conjecture. Enter a range of numbers and watch the sequence unfold in real-time!"""
