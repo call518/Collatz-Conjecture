@@ -6,6 +6,7 @@ MIN_VALUE = 3  # 글로벌 변수 설정
 st.set_page_config(page_title="Collatz Conjecture Visualization (Longest Sequence)", layout="wide", page_icon="🌀")
 
 st.markdown("# Collatz Conjecture Visualization (Longest Sequence)")
+st.write('😎Contact to Admin: [JungJungIn](mailto:call518+visualgc@gmail.com)')
 st.sidebar.header("Input Range of Numbers")
 st.write(
     """This demo finds the starting number within a given range that produces the longest sequence in its Collatz sequence and visualizes it."""

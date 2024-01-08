@@ -7,6 +7,7 @@ MIN_VALUE = 3  # 글로벌 변수 설정
 st.set_page_config(page_title="Collatz Conjecture Visualization (Maximum Value)", layout="wide", page_icon="🌀")
 
 st.markdown("# Collatz Conjecture Visualization (Maximum Value)")
+st.write('😎Contact to Admin: [JungJungIn](mailto:call518+visualgc@gmail.com)')
 st.sidebar.header("Input Range of Numbers")
 st.write(
     """This demo finds the starting numbers within a given range that produce the highest value in their Collatz sequences and visualizes them."""

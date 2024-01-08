@@ -8,6 +8,7 @@ MAX_LINES = 1000  # 최대 라인 수 설정
 st.set_page_config(page_title="Collatz Conjecture Visualization (Multiple)", layout="wide", page_icon="🌀")
 
 st.markdown("# Collatz Conjecture Visualization (Multiple)")
+st.write('😎Contact to Admin: [JungJungIn](mailto:call518+visualgc@gmail.com)')
 st.sidebar.header("Input Range of Numbers")
 st.write(
     """This demo visualizes the Collatz Conjecture. Enter a range of numbers and watch the sequence unfold in real-time!"""
