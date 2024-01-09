@@ -6,7 +6,7 @@ MIN_VALUE = 3  # 글로벌 변수 설정
 st.set_page_config(page_title="Collatz Conjecture Visualization (Max/Long)", layout="wide", page_icon="🌀")
 
 st.markdown("# Collatz Conjecture Visualization (Max/Long)")
-st.write('😎Contact to Admin: [JungJungIn](mailto:call518+visualgc@gmail.com)')
+st.write('😎Contact to [Admin](mailto:call518+visualgc@gmail.com)')
 st.sidebar.header("Input Range of Numbers")
 st.write(
     """This demo visualizes the maximum value and the number of steps for each starting number in the Collatz Conjecture within a given range."""
